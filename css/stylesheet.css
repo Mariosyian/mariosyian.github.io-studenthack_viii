@@ -2,9 +2,9 @@
 body {
 
   background-color: #DCDCDC;
-  padding: 15px 40px 20px 40px;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px 40px 60px 40px;
 }
 
 li {
@@ -52,6 +52,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* IDs */
+
+#mentalHealthCarousel {
+
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  width: 80%;
+}
+
 
 #statistics {
 

@@ -9,6 +9,7 @@
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom CSS-->
     <link rel="stylesheet" href="css/stylesheet.css">
     <!-- Mapbox API CDN -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet"/>
@@ -20,7 +21,7 @@
   <body>
     
     <section id="intro">
-      <h1 class="main-heading">We all go through an egg-sistential crisis once a while...</h1>
+      <h1 class="main-heading">We all go through an egg-sistential crisis once in a while...</h1>
       <img src="images/eggsistential-crisis.png" alt="eggsistential-crisis" class="eggsistential-crisis">
 
       <p class="center-p">University can be a very difficult time for everyone. New way of life, new people.</p>
@@ -30,23 +31,98 @@
       <p class="center-p not-alone">Just know, you are not alone!</p>
     </section>
     
-    <br><br><hr><br>
+    <br><hr><br>
 
     <section id="statistics">
-      <p>Did you know that 1 in 5 University students has experienced at least one common mental health problem?</p>
+      <h2>Did you know that 1 in 5 University students has experienced at least one common mental health problem?</h2>
       <br>
       <p>The most common ones are:</p>
       <ul>
-        <li>Depression</li>
-        <li>Anxiety</li>
-        <li>Obsessive Compulsive Disorder (OCD)</li>
+        <li><a href="https://www.nhs.uk/conditions/clinical-depression/">Depression</a></li>
+        <li><a href="https://www.nhs.uk/conditions/generalised-anxiety-disorder/">Anxiety</a></li>
+        <li><a href="https://www.nhs.uk/conditions/obsessive-compulsive-disorder-ocd/">Obsessive Compulsive Disorder (OCD)</a></li>
       </ul>
+      <p style="font-size: 8pt; text-align: right;">NHS</p>
     </section>
+
+    
+    <!-- Carousel -->
+    <div id="mentalHealthCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3>Living in an inner city or urban environment</h3>
+          <br>
+          <p>Inner city environments can offer increased opportunities for getting what you want, but on the other hand, can also act as a disturbance to the process of making your life the way you want it to be.
+            For example, we all have a certain sense of safety that we would like to experience and yet inner cities are generally more threatening environments. Most of us desire a certain level of connectedness and belonging to other people and yet cities can be transient places with less sense of community, leaving one isolated and disconnected. So if emotional and mental health concerns are understood in terms of distress resulting from being less able to control what’s important to you, inner city populations are at increased risk. </p>
+        </div>
+    
+        <div class="carousel-item">
+          <h3>Social Deprivation</h3>
+          <br>
+          <p>’Social capital’ describes the links between individuals: links that bind and connect people within between communities. It provides a source of resilience, a buffer against risks of poor health, through social support, which is critical to physical and mental health and wellbeing. . . The extent of people’s participation in their communities, and the added control over their lives this brings has the potential to contribute to their psychosocial wellbeing and, as a result, to other health outcomes” (Marmot, 2010).
+            Lacking social capital, i.e. having limited access to, or engagement with, society, or ‘social deprivation’, therefore increases a person’s risk of mental health problems.</p>
+        </div>
+    
+        <div class="carousel-item">
+          <h3>Childhood Adversity / Trauma</h3>
+          <br>
+          <p>There is very strong evidence demonstrating that childhood adversity and adult adversity can make people more vulnerable to all sorts of mental health problems, including those considered to be much more chronic, such as psychosis. For example, people with psychosis are nearly three times more likely to have experienced childhood adversity than people who haven't experienced psychosis.
+            It doesn’t really make a difference as to what type of childhood adversity people experience, although there is some evidence that particular personal traumas, like emotional trauma or sexual trauma, may make people more vulnerable to mental health problems. Exposure to major stresses, such as war or torture, can also be factors.  The sorts of adversities that appear to be particularly relevant are those that can or do destroy the relationships that individuals have with people around them, thereby also reducing their social support networks and how connected and secure people might feel. Subsequently, their self-esteem and confidence might be reduced, along with their ability to relate to and interact with others in the future. Consequently, such individuals might have even less access to the kinds of help and support that might prevent mental health problems.
+            Also, adversity or trauma may affect the way that people regulate their emotions. They may find it more difficult to control difficult emotions, and the way that they manage those emotions may be disrupted due to the experiences that they have, and may be more difficult to manage their mood and symptoms associated with it.</p>
+        </div>
+
+        <div class="carousel-item">
+          <h3>Inequality</h3>
+          <br>
+          <p>Inequalities are factors that can contribute to mental health problems.
+            For example, children and adults living in the lowest 20% income bracket in England are 2 to 3 times more likely to develop mental health problems than those in the highest (Marmot 2010). 
+            In their book ‘The Spirit Level: Why Equality is Good for Everyone’ (2010), Richard Wilkinson and Kate Pickett argue that living in a society with high levels of income inequality is harmful because it places people in a steep hierarchy that increases status competition and causes stress.</p>
+        </div>
+
+        <div class="carousel-item">
+          <h3>Minority Status</h3>
+          <br>
+          <p>In the U.K. there are consistently high rates of mental health problems in particular groups, for example in particular ethnic minority groups and in migrant populations, regardless of their original ethnic origin.
+            Higher rates of mental health problems aren’t caused by being part of a particular group of people, rather, they are related to people perceiving themselves to be a minority within any given larger population.
+            For example, if you live in an area where the majority of the population belong to a different culture to you, being a cultural minority increases your vulnerability to developing mental health problems. This might be because you have less access to social support, have less ‘social capital’, than the majority population.
+            Higher rates of mental health problems in minority ethnic groups can also be linked to the fact such groups are more likely to suffer social and economic disadvantage, which are also associated with an increased risk of mental illness (APMS 2014).</p>
+        </div>
+
+        <div class="carousel-item">
+          <h3>Substance Abuse</h3>
+          <br>
+          <p>Using illegal substances, alcohol, and some prescribed substances in a way that wasn't prescribed, can make people more vulnerable to mental health problems, and make mental health problems more persistent.
+            For example, persistent alcohol and drug use will exacerbate mental health problems like depression, and anxiety, due to the effects of the drugs or the substances themselves.
+            Also, people with mental health problems, such as psychosis, who misuse substances tend to end up in hospital more often, and are likely to have more persistent problems with aggression than the general population. They are also more likely to be victims of aggression, due to the social problems that substance misuse can cause.  
+            Also, substance misuse may have a causal role in the development of some mental health problems. For example, we know that particular types of cannabis with high rates of THC (the active ingredient of cannabis), may trigger psychosis in some vulnerable individuals. </p>
+        </div>
+
+        <!-- Left and Right controls -->
+        <a class="carousel-control-prev" href="#mentalHealthCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mentalHealthCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <p style="font-size: 8pt; text-align: right; width: 90%;">UCIL20112 Understanding Mental Health</p>
+
+    <br>
+    <h2>Did you know that the University of Manchester has a <a href="http://www.studentsupport.manchester.ac.uk/taking-care/support-services/accessing-healthcare/">Student Support Page</a>?</h2>
+    <h4>Use this page if you ever start to feel out of touch or need someone to talk to confidentialy.</h4>
+    <hr style="width: 30%;">
+    <p class="center-p">Also try this <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mood-self-assessment/">Mood Assessment Quiz from the NHS</a> if you believe you are going through a mental health problem.</p>
+    
+    <br>
 
     <!-- Mapbox API - Find nearest GP -->
     <p>Find your nearest GP: <a href="http://documents.manchester.ac.uk/display.aspx?DocID=33315" target="_blank">University of Manchester GP Details</a></p>
     <hr>
     <div id='map' style='width: 100%; height: 350px;'></div>
+
     <script type="text/javascript">
       mapboxgl.accessToken = 'pk.eyJ1IjoiZXZlbnRsaXRlZjEyIiwiYSI6ImNrODMwOWM3ODAxa3AzdW81YTFyaGp4cGkifQ.FzUdEKsz2vsaMLx2W69pXQ';
       // List of GP's in Manchester
@@ -86,15 +162,13 @@
       map.addControl(new mapboxgl.FullscreenControl());
       // Add zoom and rotation controls to the map.
       map.addControl(new mapboxgl.NavigationControl());
-      
+
       // Add all GP as markers on map
       gp.forEach(function placeMarkers(e, index) {
     	  var popup = new mapboxgl.Popup({ offset: 35 }).setText(e[2] + ' | ' + e[3]);
     	  new mapboxgl.Marker().setLngLat([e[0], e[1]]).setPopup(popup).addTo(map);
       })
     </script>
-
-    <!-- Mental Health Quiz -->
   </body>
 
   <!-- Bootstrap JS -->
