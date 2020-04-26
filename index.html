@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHack VIII project for students mental health">
+    <meta name="author" content="Marios Yiannakou">
+    <title>StudentHack VIII</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- Mapbox API CDN -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet"/>
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" rel="stylesheet"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js" type="text/javascript"></script>  
+  </head>
+
+  <body>
+    
+    <section id="intro">
+      <h1 class="main-heading">We all go through an egg-sistential crisis once a while...</h1>
+      <img src="images/eggsistential-crisis.png" alt="eggsistential-crisis" class="eggsistential-crisis">
+
+      <p class="center-p">University can be a very difficult time for everyone. New way of life, new people.</p>
+      <br>
+      <p class="center-p">It is always good to know the available resources that you have to help yourself and others.</p>
+      <br>
+      <p class="center-p not-alone">Just know, you are not alone!</p>
+    </section>
+    
+    <br><br><hr><br>
+
+    <section id="statistics">
+      <p>Did you know that 1 in 5 University students has experienced at least one common mental health problem?</p>
+      <br>
+      <p>The most common ones are:</p>
+      <ul>
+        <li>Depression</li>
+        <li>Anxiety</li>
+        <li>Obsessive Compulsive Disorder (OCD)</li>
+      </ul>
+    </section>
+
+    <!-- Mapbox API - Find nearest GP -->
+    <p>Find your nearest GP: <a href="http://documents.manchester.ac.uk/display.aspx?DocID=33315" target="_blank">University of Manchester GP Details</a></p>
+    <hr>
+    <div id='map' style='width: 100%; height: 350px;'></div>
+    <script type="text/javascript">
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZXZlbnRsaXRlZjEyIiwiYSI6ImNrODMwOWM3ODAxa3AzdW81YTFyaGp4cGkifQ.FzUdEKsz2vsaMLx2W69pXQ';
+      // List of GP's in Manchester
+      var gp = [
+        [-2.238234, 53.476987, "M1 3LY", "The Docs"],
+        [-2.224211, 53.469757, "M13 9UJ", "The Vallance Center"],
+        [-2.239675, 53.466992, "M15 6PR", "Cornbrook Medical Practice"],
+        [-2.236826, 53.465968, "M15 6FH", "University Dental Hospital"],
+        [-2.204300, 53.459940, "M12 4JE", "New Bank Care Hospital"],
+        [-2.221314, 53.459306, "M13 0FH", "Hathersage Center - Sexual Health Clinic"],
+        [-2.237298, 53.459057, "M14 4GP", "Moss Side Health Center"],
+        [-2.218788, 53.458395, "M14 5BY", "Surrey Lodge Group Practice"],
+        [-2.226351, 53.454755, "M14 5NP", "Rusholme Health Center"],
+        [-2.208578, 53.454154, "M13 0YL", "Aisla Craig Medical Practice"],
+        [-2.222873, 53.452148, "M14 5LQ", "Wilmslow Road Medical Center"],
+        [-2.204377, 53.443601, "M14 6FS", "Hawthorn Medical Center"],
+        [-2.215307, 53.440685, "M14 6WP", "Bodey Medical Center"],
+        [-2.213563, 53.438433, "M14 6YL", "Fallowfield Medical Center"],
+        [-2.213701, 53.435057, "M14 6SQ", "Mauldeth Medical Center"],
+        [-2.237777, 53.434356, "M20 1EB", "Borchardt Medical Center"],
+        [-2.214234, 53.430239, "M20 4SS", "Ladybarn Group Practice"]
+      ];
+      // Create the map
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          zoom: 12,
+          center: [-2.23743, 53.48095]
+      });
+      // Add a search bar
+      map.addControl(new MapboxGeocoder({
+                        accessToken: mapboxgl.accessToken,
+                        mapboxgl: mapboxgl,
+                        marker: false
+                      }));
+      // Add full screen control
+      map.addControl(new mapboxgl.FullscreenControl());
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.NavigationControl());
+      
+      // Add all GP as markers on map
+      gp.forEach(function placeMarkers(e, index) {
+    	  var popup = new mapboxgl.Popup({ offset: 35 }).setText(e[2] + ' | ' + e[3]);
+    	  new mapboxgl.Marker().setLngLat([e[0], e[1]]).setPopup(popup).addTo(map);
+      })
+    </script>
+
+    <!-- Mental Health Quiz -->
+  </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

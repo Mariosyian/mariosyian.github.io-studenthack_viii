@@ -1,0 +1,60 @@
+/* Elements */
+body {
+
+  background-color: #DCDCDC;
+  padding: 15px 40px 20px 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+
+  font-size: 14pt;
+}
+
+p {
+
+  font-size: 16pt;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+  text-align: center;
+}
+
+/* Classes */
+
+.center-p {
+
+  text-align: center;
+}
+
+.eggsistential-crisis {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25px;
+  width: 15%;
+}
+
+.main-heading {
+  
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+
+.not-alone {
+
+  font-size: 24pt;
+  text-align: center;
+}
+
+/* IDs */
+
+#statistics {
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
